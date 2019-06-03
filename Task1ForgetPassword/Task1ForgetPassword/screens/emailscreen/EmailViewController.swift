@@ -11,15 +11,24 @@ import UIKit
 class EmailViewController: UIViewController {
 
     @IBOutlet weak var emailTF: UITextField!
+    
+    @IBOutlet weak var sendBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        roundedView(rView : sendBtn)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func roundedView (rView : AnyObject){
+        rView.layer.cornerRadius = 10
+        rView.layer.masksToBounds = true
     }
     
 

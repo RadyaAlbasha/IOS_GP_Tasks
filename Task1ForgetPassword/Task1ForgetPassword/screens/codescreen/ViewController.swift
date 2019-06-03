@@ -22,12 +22,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resendEmailBtn: UIButton!
     
+    @IBOutlet weak var nextBtn: UIButton!
+    
+    @IBOutlet weak var progressBar: ProgressBar!
+    
     var time = 30;
     var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        roundedView(rView: nextBtn)
+        progressBar.setProgressBar(hours: 0, minutes: 0, seconds: time)
+        
         digit1TF.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
         digit2TF.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
         digit3TF.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControlEvents.editingChanged)
@@ -39,9 +46,14 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         digit1TF.becomeFirstResponder()
+        resetTimer()
         startTimer()
+        
     }
-
+    func roundedView (rView : AnyObject){
+        rView.layer.cornerRadius = 10
+        rView.layer.masksToBounds = true
+    }
     @objc func textFieldDidChange(textField: UITextField){
         
         let text = textField.text
@@ -75,9 +87,11 @@ class ViewController: UIViewController {
     }
     func startTimer(){
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.action), userInfo: nil, repeats: true)
+        progressBar.start()
     }
     func resetTimer(){
         timer.invalidate()
+        progressBar.stop()
         time = 30
         timerLabel.text="30"
         resendEmailBtn.isEnabled = false

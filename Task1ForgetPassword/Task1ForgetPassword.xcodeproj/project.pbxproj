@@ -17,6 +17,8 @@
 		BA17FCF022A066AF0028ED2D /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA17FCEF22A066AF0028ED2D /* NewPasswordViewController.swift */; };
 		BA17FCF222A067C60028ED2D /* show.png in Resources */ = {isa = PBXBuildFile; fileRef = BA17FCF122A067C50028ED2D /* show.png */; };
 		BA17FCF422A08C350028ED2D /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BA17FCF322A08C340028ED2D /* logo.jpeg */; };
+		BA5AC97522A56A92009935B3 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5AC97422A56A92009935B3 /* ProgressBar.swift */; };
+		BA5AC97822A56B03009935B3 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5AC97722A56B03009935B3 /* CustomColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		BA17FCEF22A066AF0028ED2D /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		BA17FCF122A067C50028ED2D /* show.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show.png; sourceTree = "<group>"; };
 		BA17FCF322A08C340028ED2D /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
+		BA5AC97422A56A92009935B3 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		BA5AC97722A56B03009935B3 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 		BA17FCD322A061B90028ED2D /* Task1ForgetPassword */ = {
 			isa = PBXGroup;
 			children = (
+				BA5AC97622A56AEF009935B3 /* utils */,
+				BA5AC97322A56A5E009935B3 /* progress */,
 				BA17FCE922A066180028ED2D /* screens */,
 				BA17FCD422A061B90028ED2D /* AppDelegate.swift */,
 				BA17FCD822A061B90028ED2D /* Main.storyboard */,
@@ -109,6 +115,22 @@
 				BA17FCEF22A066AF0028ED2D /* NewPasswordViewController.swift */,
 			);
 			path = newpasswordscreen;
+			sourceTree = "<group>";
+		};
+		BA5AC97322A56A5E009935B3 /* progress */ = {
+			isa = PBXGroup;
+			children = (
+				BA5AC97422A56A92009935B3 /* ProgressBar.swift */,
+			);
+			path = progress;
+			sourceTree = "<group>";
+		};
+		BA5AC97622A56AEF009935B3 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				BA5AC97722A56B03009935B3 /* CustomColor.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +207,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA17FCD722A061B90028ED2D /* ViewController.swift in Sources */,
+				BA5AC97822A56B03009935B3 /* CustomColor.swift in Sources */,
 				BA17FCD522A061B90028ED2D /* AppDelegate.swift in Sources */,
 				BA17FCDD22A061B90028ED2D /* Task1ForgetPassword.xcdatamodeld in Sources */,
 				BA17FCF022A066AF0028ED2D /* NewPasswordViewController.swift in Sources */,
+				BA5AC97522A56A92009935B3 /* ProgressBar.swift in Sources */,
 				BA17FCEE22A066910028ED2D /* EmailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

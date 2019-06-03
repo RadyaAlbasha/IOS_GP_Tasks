@@ -13,9 +13,14 @@ class NewPasswordViewController: UIViewController {
     @IBOutlet weak var newPasswordTF: UITextField!
     
     @IBOutlet weak var confirmTF: UITextField!
+    
+    
+    @IBOutlet weak var resetPasswordBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        roundedView(rView: resetPasswordBtn)
+        
         let myColor = UIColor.black
         newPasswordTF.layer.borderColor = myColor.cgColor
         confirmTF.layer.borderColor = myColor.cgColor
@@ -27,7 +32,10 @@ class NewPasswordViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func roundedView (rView : AnyObject){
+        rView.layer.cornerRadius = 10
+        rView.layer.masksToBounds = true
+    }
 
     /*
     // MARK: - Navigation
