@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var capacityLabel: UILabel!
     
-    @IBOutlet weak var editBtn: UIButton!
-    
     @IBOutlet weak var buldingView: UIView!
     
     @IBOutlet weak var floorView: UIView!
@@ -29,7 +27,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //rounded corners
-        roundedView(rView: editBtn)
         roundedView(rView: buldingView)
         roundedView(rView: floorView)
         roundedView(rView: capacityView)
