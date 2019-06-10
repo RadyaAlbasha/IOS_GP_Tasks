@@ -12,14 +12,11 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var detailsView: UIView!
     
-    @IBOutlet weak var editBtn: UIButton!
-    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        roundedView(rView: editBtn)
         roundedView(rView: detailsView)
     }
 
